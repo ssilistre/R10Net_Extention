@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R10 Yardımcısı</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <div class="container p-3">
+    <h5 class="text-center">R10 Yardımcısı</h5>
+    <hr />
+
+    <!-- Okunmamış mesaj ve bildirim -->
+    <div class="alert alert-info text-center">
+      <strong>Okunmamış:</strong> <span id="unreadCount">0</span>
+    </div>
+
+    <!-- Ayar Formu -->
+    <form id="settingsForm">
+      <div class="form-check mb-2">
+        <input type="checkbox" class="form-check-input" id="toggleAds">
+        <label class="form-check-label" for="toggleAds">Reklamları Gizle</label>
+      </div>
+      <div class="form-check mb-2">
+        <input type="checkbox" class="form-check-input" id="sendNotifications">
+        <label class="form-check-label" for="sendNotifications">Bildirim Gönder</label>
+      </div>
+      <div class="mb-3">
+        <label for="pollingInterval" class="form-label">Bildirim Kontrol Aralığı (ms):</label>
+        <input
+          type="number"
+          class="form-control"
+          id="pollingInterval"
+          value="60000"
+          min="10000"
+          step="1000"
+        />
+      </div>
+      <button type="button" class="btn btn-primary w-100" id="saveSettings">
+        Kaydet
+      </button>
+    </form>
+  </div>
+<a href="https://ssilistre.dev" target="_blank" >Hayatınızı kolaylaştıran adam!</a>
+  <script src="popup.js"></script>
+</body>
+</html>
